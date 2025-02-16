@@ -27,7 +27,7 @@ import (
 func main() {
 	http.HandleFunc("/blue", blueHandler)
 	http.HandleFunc("/red",redHandler)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	http.ListenAndServe(":8080", nil)
 }
 
 func blueHandler(w http.ResponseWriter, r *http.Request) {
